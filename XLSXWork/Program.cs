@@ -1,4 +1,6 @@
 ﻿using OfficeOpenXml;
+using OfficeOpenXml.Style;
+using System.Drawing;
 namespace XLSXWork
 {
     // 1.Открыть Эксэль
@@ -9,6 +11,8 @@ namespace XLSXWork
 
 
     // Работа: запустить приложение - сформировать книгу - сформировать лист - работаем с ячейками
+    // Cell.Value - для записи
+    // Cell.Text - для чтения
     internal class Program
     {
         static void Main(string[] args)
@@ -63,9 +67,9 @@ namespace XLSXWork
             //newWorkSheet.Cells["C3"].Value = "Ячейка да";
             //newWorkSheet.Cells["D2"].Value = "Ячейка нет";
 
-            newBook.Save(); // Сохранение книги
-
             
+
+
 
             //ExcelWorksheet existingWorksheet = newBook.Workbook.Worksheets["Мой лист"]; // добавление к существующему листу
 
@@ -76,6 +80,49 @@ namespace XLSXWork
 
             //newBook.Workbook.Worksheets.Delete(newBook.Workbook.Worksheets["Мой лист"]); // удаление существующего листа
 
+
+
+            // new List
+
+            ExcelWorksheet currentSheet = newBook.Workbook.Worksheets["Стилизованный лист"];
+
+            // Изменение параметров ячеек по диапазону
+
+            currentSheet.Cells["A1:C10"].AutoFitColumns(); // Автовыравнивание столбцов
+
+            currentSheet.Cells["A1:C1"].Merge = true; // Объединение ячеек
+
+            currentSheet.Cells["A1"].Style.WrapText = true; // Перенос текста
+
+            currentSheet.Cells["A1"].Value = "Какой-то текст"; // Запись текста в ячейку
+
+            currentSheet.Cells["A1:C10"].Value = "Какой-то текст"; // Запись текста в диапазон
+
+            currentSheet.Cells["A1:C10"].Style.Font.Size = 20; // Размер шрифта
+
+            currentSheet.Cells["A1:C10"].Style.Font.Bold = true; // Жирный шрифт
+
+            currentSheet.Cells["A1:C10"].Style.Font.Italic = true; // Курсивный шрифт 
+
+            currentSheet.Cells["A1:C10"].Style.Font.Color.SetColor(Color.Red); // Цвет шрифта
+
+            // Настройки заливки непосредственно ячеек
+
+            currentSheet.Cells["A1:C10"].Style.Fill.PatternType = ExcelFillStyle.DarkGrid;
+            currentSheet.Cells["A1:C10"].Style.Fill.BackgroundColor.SetColor(Color.Green);
+
+            // Настройки границ ячеек
+            currentSheet.Cells["A1:C10"].Style.Border.Top.Style = ExcelBorderStyle.Double;
+            currentSheet.Cells["A1:C10"].Style.Border.Top.Color.SetColor(Color.Red);
+            
+
+            //currentSheet.Columns[1].Width = 50; // У конкретного столбцв
+            //currentSheet.Columns.Width = 50; // У всех столбцов
+            //currentSheet.Rows[1].Height = 50; // У конкретной строки
+
+
+
+            newBook.Save(); // Сохранение книги
         }
     }
 }
