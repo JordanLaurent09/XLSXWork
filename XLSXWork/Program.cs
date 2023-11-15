@@ -13,7 +13,7 @@ namespace XLSXWork
     {
         static void Main(string[] args)
         {
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial; //  Позволяет использовать отладку
             ExcelPackage newBook = new ExcelPackage("newTable.xlsx");
             ExcelWorksheet newWorkSheet = newBook.Workbook.Worksheets["Мой лист"];//newBook.Workbook.Worksheets.Add("Мой лист"); // добавление нового листа в книгу
 
@@ -26,6 +26,8 @@ namespace XLSXWork
 
             string findingValue = "СкубиДу";
 
+
+            // Первый способ поиска координат ячейки
             int row = 0;
             int column = 0;
 
@@ -41,6 +43,19 @@ namespace XLSXWork
             }
 
             Console.WriteLine($"Значение {findingValue} найдено в ячейке с координатами {row}:{column}");
+
+            // Второй способ поиска
+
+            for(int i = 1; i < newWorkSheet.Rows.EndRow; i++)
+            {
+                for(int j = 1; j < newWorkSheet.Columns.EndColumn; j++)
+                {
+                    if (newWorkSheet.Cells[i, j].Text == findingValue)
+                    {
+                        Console.WriteLine($"Значение {findingValue} найдено в ячейке с координатами {i}-{j}");
+                    }
+                }
+            }
 
             // заполнение ячеек
             //newWorkSheet.Cells["B5"].Value = "Эта девушка";
