@@ -122,7 +122,31 @@ namespace XLSXWork
 
 
 
+            
+
+            //ExcelPackage calendarBook = new ExcelPackage("Calendar.xlsx");
+            ExcelWorksheet calendarSheet = newBook.Workbook.Worksheets["Календарь"];
+
+            for(int i = 1; i <= 12; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    for (int j = 1; j <= 30; j++)
+                    {
+                        calendarSheet.Cells[j, i].Value = j;
+                    }
+                }
+                else
+                {
+                    for (int j = 1; j <= 31; j++)
+                    {
+                        calendarSheet.Cells[j, i].Value = j;
+                    }
+                }
+            }
+
             newBook.Save(); // Сохранение книги
+
         }
     }
 }
