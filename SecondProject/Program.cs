@@ -50,9 +50,8 @@ namespace SecondProject
                 currentSheet.Cells["C" + (i + 2)].Value = goods[i].Description;
                 currentSheet.Cells["D" + (i + 2)].Value = goods[i].CurrentAmount;
                 currentSheet.Cells["E" + (i + 2)].Value = goods[i].SelfPrice;
-                string currAmAddress = currentSheet.Cells[i, i].Address;
-                string selfPrAddress = currentSheet.Cells[i, i].Address;
-                currentSheet.Cells["F" + (i + 2)].Formula = "SUM(currAmAddress:selfPrAddress)";
+                
+                currentSheet.Cells["F" + (i + 2)].Formula = $"PRODUCT(\"D\" + (i + 2): \"E\" + (i + 2))";
                 
             }
 
