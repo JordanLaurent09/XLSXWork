@@ -7,23 +7,65 @@ namespace SecondProject
      * 2-я формула: AVERAGE(A1:C3) - формула для среднего арифметического
      * 3-я формула: COUNT() - подсчет чисел
      */
+
+    // текущийЛист.Cells[1,1].Address;
     internal class Program
     {
         static void Main(string[] args)
         {
-            ExcelPackage newBook = new ExcelPackage("Formulas.xlsx");
-            ExcelWorksheet currentSheet = newBook.Workbook.Worksheets.Add(Console.ReadLine());
 
-            Random random = new Random();
-            currentSheet.Columns.Width = 50;
-            for (int i = 0; i < 10; i++)
+            List<Good> goods = new List<Good>()
             {
-                for(int j = 0; j < 5; j++)
-                {                    
-                    currentSheet.Cells[i + 1, j + 1].Value = $"Значение {random.Next(50)}";
-                }
+                new Good("Картошка", 123, "Вкусная и сладкая", 200, 5, 25, new DateTime(2023, 11, 12), "Артур Артуров", "Очень хорошие картофелины!!!", 100),
+                new Good("Огурцы", 111, "Соленые, красивые, зеленые", 2000, 10, 42, new DateTime(2023, 11, 13), "Дима Димовский", "Глупец!Огурцы?!", 500),
+                new Good("Блинчики", 777, "Блины с сыром и ветчиной", 400, 20, 100, new DateTime(2023, 11, 14), "Блин Блиновский", "Лучшие блинчики на всей планете", 50)
+
+            };
+
+
+            ExcelPackage newBook = new ExcelPackage("Warehouse.xlsx");
+            ExcelWorksheet currentSheet = newBook.Workbook.Worksheets["Goods"];
+
+            //newBook.Save();
+
+            currentSheet.Cells["A1"].Value = "Название товара";
+            currentSheet.Cells["B1"].Value = "Код товара";
+            currentSheet.Cells["C1"].Value = "Описание товара";
+            currentSheet.Cells["D1"].Value = "Количество в наличии";
+            currentSheet.Cells["E1"].Value = "Себестоимость единицы товара";
+            currentSheet.Cells["F1"].Value = "Общая стоимость";
+            currentSheet.Cells["G1"].Value = "Цена продажи";
+            currentSheet.Cells["H1"].Value = "Остаток в деньгах";
+            currentSheet.Cells["I1"].Value = "Дата поступления";
+            currentSheet.Cells["J1"].Value = "Поставщик";
+            currentSheet.Cells["K1"].Value = "Примечания товара";
+            currentSheet.Cells["L1"].Value = "Минимальный запас";
+
+            currentSheet.Cells["A1:L1"].AutoFitColumns();
+
+            for (int i = 0; i < goods.Count; i++)
+            {
+                currentSheet.Cells["A" + (i + 2)].Value = goods[i].Name;
+                currentSheet.Cells["B" + (i + 2)].Value = goods[i].Code;
+                currentSheet.Cells["C" + (i + 2)].Value = goods[i].Description;
+                currentSheet.Cells["D" + (i + 2)].Value = goods[i].CurrentAmount;
+                currentSheet.Cells["E" + (i + 2)].Value = goods[i].SelfPrice;
+                string currAmAddress = currentSheet.Cells[i, i].Address;
+                string selfPrAddress = currentSheet.Cells[i, i].Address;
+                currentSheet.Cells["F" + (i + 2)].Formula = "SUM(currAmAddress:selfPrAddress)";
+                
             }
-            currentSheet.Cells["F1"].Formula = "VLOOKUP(F2, B1:E5, 2, FALSE)";
+
+            //Random random = new Random();
+            //currentSheet.Columns.Width = 50;
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    for(int j = 0; j < 5; j++)
+            //    {                    
+            //        currentSheet.Cells[i + 1, j + 1].Value = $"Значение {random.Next(50)}";
+            //    }
+            //}
+            //currentSheet.Cells["F1"].Formula = "VLOOKUP(F2, B1:E5, 2, FALSE)";
 
             // Некоторые полезные формулы
             //currentSheet.Cells["A1"].Value = 30;
@@ -85,6 +127,35 @@ namespace SecondProject
 
 
             //newBook.Save();  // Обязательная команда для создания эксэль-файла
+        }
+    }
+
+    class Good
+    {       
+        public string Name { get; set; }
+        public int Code { get; set; }
+        public string Description { get; set; }
+        public int CurrentAmount { get; set; }
+        public double SelfPrice { get; set; }       
+        public double SellPrice { get; set; }
+        
+        public DateTime ReceiveDate { get; set; }
+        public string TradeAgent { get; set; }
+        public string Comments { get; set; }
+        public int MinimalAmount { get; set; }
+
+        public Good(string name, int code, string description, int currentAmount, double selfPrice, double sellPrice, DateTime receiveDate, string tradeAgent, string comments, int minimalAmount)
+        {
+            Name = name;
+            Code = code;
+            Description = description;
+            CurrentAmount = currentAmount;
+            SelfPrice = selfPrice;            
+            SellPrice = sellPrice;           
+            ReceiveDate = receiveDate;
+            TradeAgent = tradeAgent;
+            Comments = comments;
+            MinimalAmount = minimalAmount;
         }
     }
 }
