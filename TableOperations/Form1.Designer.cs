@@ -40,6 +40,9 @@
             userAgeTB = new TextBox();
             AddBTN = new Button();
             UploadListBTN = new Button();
+            AddColumnBTN = new Button();
+            columnNameTB = new TextBox();
+            columnTextTB = new TextBox();
             ((System.ComponentModel.ISupportInitialize)DataGridDGV).BeginInit();
             SuspendLayout();
             // 
@@ -52,6 +55,7 @@
             DataGridDGV.RowTemplate.Height = 25;
             DataGridDGV.Size = new Size(340, 335);
             DataGridDGV.TabIndex = 0;
+            DataGridDGV.KeyDown += DataGridDGV_KeyDown;
             // 
             // UserNames
             // 
@@ -121,7 +125,7 @@
             // 
             // AddBTN
             // 
-            AddBTN.Location = new Point(557, 228);
+            AddBTN.Location = new Point(544, 214);
             AddBTN.Name = "AddBTN";
             AddBTN.Size = new Size(75, 23);
             AddBTN.TabIndex = 7;
@@ -131,7 +135,7 @@
             // 
             // UploadListBTN
             // 
-            UploadListBTN.Location = new Point(544, 283);
+            UploadListBTN.Location = new Point(544, 243);
             UploadListBTN.Name = "UploadListBTN";
             UploadListBTN.Size = new Size(122, 57);
             UploadListBTN.TabIndex = 8;
@@ -139,11 +143,37 @@
             UploadListBTN.UseVisualStyleBackColor = true;
             UploadListBTN.Click += UploadListBTN_Click;
             // 
+            // AddColumnBTN
+            // 
+            AddColumnBTN.Location = new Point(678, 375);
+            AddColumnBTN.Name = "AddColumnBTN";
+            AddColumnBTN.Size = new Size(75, 64);
+            AddColumnBTN.TabIndex = 9;
+            AddColumnBTN.UseVisualStyleBackColor = true;
+            AddColumnBTN.Click += AddColumnBTN_Click;
+            // 
+            // columnNameTB
+            // 
+            columnNameTB.Location = new Point(464, 374);
+            columnNameTB.Name = "columnNameTB";
+            columnNameTB.Size = new Size(165, 23);
+            columnNameTB.TabIndex = 10;
+            // 
+            // columnTextTB
+            // 
+            columnTextTB.Location = new Point(464, 416);
+            columnTextTB.Name = "columnTextTB";
+            columnTextTB.Size = new Size(165, 23);
+            columnTextTB.TabIndex = 11;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(columnTextTB);
+            Controls.Add(columnNameTB);
+            Controls.Add(AddColumnBTN);
             Controls.Add(UploadListBTN);
             Controls.Add(AddBTN);
             Controls.Add(userAgeTB);
@@ -174,5 +204,8 @@
         private TextBox userAgeTB;
         private Button AddBTN;
         private Button UploadListBTN;
+        private Button AddColumnBTN;
+        private TextBox columnNameTB;
+        private TextBox columnTextTB;
     }
 }

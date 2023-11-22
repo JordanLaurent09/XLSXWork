@@ -13,7 +13,7 @@ namespace TableOperations
             AddUser();
         }
 
-        
+
         private void UploadListBTN_Click(object sender, EventArgs e)
         {
             UploadUsers();
@@ -27,12 +27,31 @@ namespace TableOperations
 
         private void UploadUsers()
         {
-            foreach(User user in _users)
+            foreach (User user in _users)
             {
                 DataGridDGV.Rows.Add(user.Name, user.Surname, user.Age);
             }
 
             _users.Clear();
+        }
+
+        private void AddColumnBTN_Click(object sender, EventArgs e)
+        {
+            DataGridDGV.Columns.Add(columnNameTB.Text, columnTextTB.Text);
+
+        }
+
+        private void DataGridDGV_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Delete)
+            {
+                if(DataGridDGV.SelectedCells.Count > 0)
+                {
+                    DataGridDGV.SelectedCells[0].Value = null;
+                }
+                // Можно делать так
+                //DataGridDGV.SelectedRows[0].Cells.Clear();
+            }
         }
     }
 }
