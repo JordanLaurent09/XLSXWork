@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableOperations_WinForms", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableOperations", "TableOperations\TableOperations.csproj", "{04D28590-AEE7-4C4F-89D5-90F06E30C7B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGW_Practice_1", "DGW_Practice_1\DGW_Practice_1.csproj", "{9577D0B1-7E88-4E9D-BE15-36A07127C704}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{04D28590-AEE7-4C4F-89D5-90F06E30C7B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04D28590-AEE7-4C4F-89D5-90F06E30C7B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04D28590-AEE7-4C4F-89D5-90F06E30C7B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9577D0B1-7E88-4E9D-BE15-36A07127C704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9577D0B1-7E88-4E9D-BE15-36A07127C704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9577D0B1-7E88-4E9D-BE15-36A07127C704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9577D0B1-7E88-4E9D-BE15-36A07127C704}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
