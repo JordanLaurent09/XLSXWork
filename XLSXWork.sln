@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableOperations", "TableOpe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGW_Practice_1", "DGW_Practice_1\DGW_Practice_1.csproj", "{9577D0B1-7E88-4E9D-BE15-36A07127C704}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGV_DataSource", "DGV_DataSource\DGV_DataSource.csproj", "{3F3788C3-07EA-4732-B45C-35FA41AF6BA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{9577D0B1-7E88-4E9D-BE15-36A07127C704}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9577D0B1-7E88-4E9D-BE15-36A07127C704}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9577D0B1-7E88-4E9D-BE15-36A07127C704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F3788C3-07EA-4732-B45C-35FA41AF6BA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F3788C3-07EA-4732-B45C-35FA41AF6BA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F3788C3-07EA-4732-B45C-35FA41AF6BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F3788C3-07EA-4732-B45C-35FA41AF6BA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
