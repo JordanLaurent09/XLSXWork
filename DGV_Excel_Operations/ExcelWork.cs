@@ -9,9 +9,9 @@ namespace DGV_Excel_Operations
         // получение данных из файла
         public static List<Student> GetExcelData()
         {
+            LicenseContext lc = LicenseContext.NonCommercial;
             List<Student> students = new List<Student>();
             ExcelPackage studentsBook = new ExcelPackage("StudentData.xlsx");
-
             ExcelWorksheet studentsSheet = studentsBook.Workbook.Worksheets["Students"];
 
             for(int i = 0; i < studentsSheet.Workbook.Worksheets.Count; i++)
