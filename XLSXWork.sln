@@ -7,17 +7,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XLSXWork", "XLSXWork\XLSXWo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecondProject", "SecondProject\SecondProject.csproj", "{4A81FCCE-92B7-4925-94E4-F088F1430945}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdLesson", "ThirdLesson\ThirdLesson.csproj", "{57F6B3F9-257B-414B-9DCA-1CC72A66B300}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThirdLesson", "ThirdLesson\ThirdLesson.csproj", "{57F6B3F9-257B-414B-9DCA-1CC72A66B300}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableOperations_WinForms", "TableOperations_WinForms\TableOperations_WinForms.csproj", "{EBC1B9B1-1ED5-4A53-A02F-FFA8E192A9CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TableOperations_WinForms", "TableOperations_WinForms\TableOperations_WinForms.csproj", "{EBC1B9B1-1ED5-4A53-A02F-FFA8E192A9CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableOperations", "TableOperations\TableOperations.csproj", "{04D28590-AEE7-4C4F-89D5-90F06E30C7B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TableOperations", "TableOperations\TableOperations.csproj", "{04D28590-AEE7-4C4F-89D5-90F06E30C7B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGW_Practice_1", "DGW_Practice_1\DGW_Practice_1.csproj", "{9577D0B1-7E88-4E9D-BE15-36A07127C704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGW_Practice_1", "DGW_Practice_1\DGW_Practice_1.csproj", "{9577D0B1-7E88-4E9D-BE15-36A07127C704}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGV_DataSource", "DGV_DataSource\DGV_DataSource.csproj", "{3F3788C3-07EA-4732-B45C-35FA41AF6BA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGV_DataSource", "DGV_DataSource\DGV_DataSource.csproj", "{3F3788C3-07EA-4732-B45C-35FA41AF6BA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGV_Excel_Operations", "DGV_Excel_Operations\DGV_Excel_Operations.csproj", "{06F5630F-69FE-4E07-988B-8B8788ACBF2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGV_Excel_Operations", "DGV_Excel_Operations\DGV_Excel_Operations.csproj", "{06F5630F-69FE-4E07-988B-8B8788ACBF2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSV_Operator", "CSV_Operator\CSV_Operator.csproj", "{3E7325E5-1BBF-49A1-8B6A-8F685B47E6E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{06F5630F-69FE-4E07-988B-8B8788ACBF2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06F5630F-69FE-4E07-988B-8B8788ACBF2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06F5630F-69FE-4E07-988B-8B8788ACBF2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E7325E5-1BBF-49A1-8B6A-8F685B47E6E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E7325E5-1BBF-49A1-8B6A-8F685B47E6E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E7325E5-1BBF-49A1-8B6A-8F685B47E6E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E7325E5-1BBF-49A1-8B6A-8F685B47E6E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
