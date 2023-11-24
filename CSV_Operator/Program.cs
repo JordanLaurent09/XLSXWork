@@ -15,7 +15,12 @@ namespace CSV_Operator
             // Чтение из файла
             StreamReader reader = new StreamReader("example.csv");
 
-            CsvReader csvReader = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture));
+            CsvConfiguration csvConfiguration = new CsvConfiguration(CultureInfo.InvariantCulture)
+            {
+                Delimiter = "," // Определяет символ разделителя данных
+            };
+
+            CsvReader csvReader = new CsvReader(reader, csvConfiguration);
 
             List<Person> people = csvReader.GetRecords<Person>().ToList();
 
