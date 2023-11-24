@@ -13,23 +13,23 @@ namespace CSV_Operator
         static void Main(string[] args)
         {
             // Чтение из файла
-            StreamReader reader = new StreamReader("example.csv");
+            //StreamReader reader = new StreamReader("example.csv");
 
-            CsvConfiguration csvConfiguration = new CsvConfiguration(CultureInfo.InvariantCulture)
-            {
-                Delimiter = "," // Определяет символ разделителя данных
-            };
+            //CsvConfiguration csvConfiguration = new CsvConfiguration(CultureInfo.InvariantCulture)
+            //{
+            //    Delimiter = "," // Определяет символ разделителя данных
+            //};
 
-            CsvReader csvReader = new CsvReader(reader, csvConfiguration);
+            //CsvReader csvReader = new CsvReader(reader, csvConfiguration);
 
-            List<Person> people = csvReader.GetRecords<Person>().ToList();
+            //List<Person> people = csvReader.GetRecords<Person>().ToList();
 
-            reader.Close();
+            //reader.Close();
 
-            foreach(Person person in people)
-            {
-                Console.WriteLine($"Имя - {person.Name}, возраст - {person.Age}");
-            }
+            //foreach(Person person in people)
+            //{
+            //    Console.WriteLine($"Имя - {person.Name}, возраст - {person.Age}");
+            //}
 
             // Запись в файл
             //StreamWriter writer = new StreamWriter("example.csv");
@@ -45,6 +45,48 @@ namespace CSV_Operator
 
             //csvWriter.WriteRecords(people);
             //writer.Close();
+
+
+            StreamReader reader = new StreamReader("inventoryControl.csv");
+
+            CsvReader csvReader = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture));
+
+            List<Goods> goods = csvReader.GetRecords<Goods>().ToList();
+
+            //foreach(Goods good in goods)
+            //{
+            //    Console.WriteLine($"{good.Name} {good.Quantity} {good.Price} {good.Description}");
+            //}
+
+            string? option = Console.ReadLine();
+
+            switch (option)
+            {
+                case ("show"):
+                    foreach (Goods good in goods)
+                    {
+                        Console.WriteLine($"{good.Name} {good.Quantity} {good.Price} {good.Description}");
+                    }
+                    break;
+                case ("maxPrice"):
+                    Console.WriteLine(goods.Max(p => p.Price));
+                    break;
+                case ("minPrice"):
+                    Console.WriteLine(goods.Min(p => p.Price));
+                    break;
+                case ("averagePrice"):
+                    Console.WriteLine(goods.Average(p => p.Price));
+                    break;
+                case ("TotalItemsAmount"):
+                    Console.WriteLine(goods.Count);
+                    break;
+            }
+                     
+            //Console.WriteLine(goods.Max(p=>p.Name));
+            //Console.WriteLine(goods.Average(p=>p.Price));
+
+            //Array.Sort(goods.ToArray());
+            
         }
     }
 }
