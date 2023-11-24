@@ -43,14 +43,14 @@
             DataGridDGV.Location = new Point(12, 12);
             DataGridDGV.Name = "DataGridDGV";
             DataGridDGV.RowTemplate.Height = 25;
-            DataGridDGV.Size = new Size(534, 212);
+            DataGridDGV.Size = new Size(826, 341);
             DataGridDGV.TabIndex = 0;
             // 
             // OpenFileBTN
             // 
-            OpenFileBTN.Location = new Point(179, 331);
+            OpenFileBTN.Location = new Point(722, 403);
             OpenFileBTN.Name = "OpenFileBTN";
-            OpenFileBTN.Size = new Size(198, 58);
+            OpenFileBTN.Size = new Size(264, 35);
             OpenFileBTN.TabIndex = 1;
             OpenFileBTN.Text = "Показать содержимое файла";
             OpenFileBTN.UseVisualStyleBackColor = true;
@@ -59,7 +59,7 @@
             // ShowCsvFilesCB
             // 
             ShowCsvFilesCB.FormattingEnabled = true;
-            ShowCsvFilesCB.Location = new Point(597, 127);
+            ShowCsvFilesCB.Location = new Point(865, 269);
             ShowCsvFilesCB.Name = "ShowCsvFilesCB";
             ShowCsvFilesCB.Size = new Size(121, 23);
             ShowCsvFilesCB.TabIndex = 2;
@@ -67,14 +67,14 @@
             // 
             // FileNameTB
             // 
-            FileNameTB.Location = new Point(105, 276);
+            FileNameTB.Location = new Point(722, 374);
             FileNameTB.Name = "FileNameTB";
-            FileNameTB.Size = new Size(349, 23);
+            FileNameTB.Size = new Size(264, 23);
             FileNameTB.TabIndex = 3;
             // 
             // AddFilesNameBTN
             // 
-            AddFilesNameBTN.Location = new Point(624, 184);
+            AddFilesNameBTN.Location = new Point(911, 298);
             AddFilesNameBTN.Name = "AddFilesNameBTN";
             AddFilesNameBTN.Size = new Size(75, 55);
             AddFilesNameBTN.TabIndex = 4;
@@ -85,7 +85,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(229, 241);
+            label1.Location = new Point(889, 356);
             label1.Name = "label1";
             label1.Size = new Size(97, 15);
             label1.TabIndex = 5;
@@ -95,7 +95,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(998, 450);
             Controls.Add(label1);
             Controls.Add(AddFilesNameBTN);
             Controls.Add(FileNameTB);
