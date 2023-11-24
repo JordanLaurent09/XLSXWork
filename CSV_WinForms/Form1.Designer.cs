@@ -33,21 +33,22 @@
             ShowCsvFilesCB = new ComboBox();
             FileNameTB = new TextBox();
             AddFilesNameBTN = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)DataGridDGV).BeginInit();
             SuspendLayout();
             // 
             // DataGridDGV
             // 
             DataGridDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridDGV.Location = new Point(26, 32);
+            DataGridDGV.Location = new Point(12, 12);
             DataGridDGV.Name = "DataGridDGV";
             DataGridDGV.RowTemplate.Height = 25;
-            DataGridDGV.Size = new Size(240, 150);
+            DataGridDGV.Size = new Size(534, 212);
             DataGridDGV.TabIndex = 0;
             // 
             // OpenFileBTN
             // 
-            OpenFileBTN.Location = new Point(47, 305);
+            OpenFileBTN.Location = new Point(179, 331);
             OpenFileBTN.Name = "OpenFileBTN";
             OpenFileBTN.Size = new Size(198, 58);
             OpenFileBTN.TabIndex = 1;
@@ -58,7 +59,7 @@
             // ShowCsvFilesCB
             // 
             ShowCsvFilesCB.FormattingEnabled = true;
-            ShowCsvFilesCB.Location = new Point(453, 135);
+            ShowCsvFilesCB.Location = new Point(597, 127);
             ShowCsvFilesCB.Name = "ShowCsvFilesCB";
             ShowCsvFilesCB.Size = new Size(121, 23);
             ShowCsvFilesCB.TabIndex = 2;
@@ -66,14 +67,14 @@
             // 
             // FileNameTB
             // 
-            FileNameTB.Location = new Point(87, 230);
+            FileNameTB.Location = new Point(105, 276);
             FileNameTB.Name = "FileNameTB";
-            FileNameTB.Size = new Size(100, 23);
+            FileNameTB.Size = new Size(349, 23);
             FileNameTB.TabIndex = 3;
             // 
             // AddFilesNameBTN
             // 
-            AddFilesNameBTN.Location = new Point(478, 198);
+            AddFilesNameBTN.Location = new Point(624, 184);
             AddFilesNameBTN.Name = "AddFilesNameBTN";
             AddFilesNameBTN.Size = new Size(75, 55);
             AddFilesNameBTN.TabIndex = 4;
@@ -81,11 +82,21 @@
             AddFilesNameBTN.UseVisualStyleBackColor = true;
             AddFilesNameBTN.Click += AddFilesNameBTN_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(229, 241);
+            label1.Name = "label1";
+            label1.Size = new Size(97, 15);
+            label1.TabIndex = 5;
+            label1.Text = "Название файла";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(AddFilesNameBTN);
             Controls.Add(FileNameTB);
             Controls.Add(ShowCsvFilesCB);
@@ -105,5 +116,6 @@
         private ComboBox ShowCsvFilesCB;
         private TextBox FileNameTB;
         private Button AddFilesNameBTN;
+        private Label label1;
     }
 }

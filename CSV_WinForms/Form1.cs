@@ -1,3 +1,4 @@
+using CSV_Operator;
 using CsvHelper;
 using CsvHelper.Configuration;
 using System.Globalization;
@@ -50,7 +51,7 @@ namespace CSV_WinForms
 
             CsvReader csvReader = new CsvReader(reader, csvConfiguration);
 
-            List<string> strange = csvReader.GetRecords<string>().ToList();
+            List<Goods> strange = csvReader.GetRecords<Goods>().ToList();
 
             DataGridDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DataGridDGV.DataSource = strange;
