@@ -24,6 +24,7 @@ namespace CSV_WinForms
         private void ShowCsvFilesCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             FileNameTB.Text = ShowCsvFilesCB.SelectedItem.ToString();
+            FileNameTB.Enabled = false;
         }
 
         private void AddFiles()
