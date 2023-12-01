@@ -12,7 +12,7 @@ namespace WordOperator
 
     /*
      * интерфейсы - Word.Application, Word.Document,
-     * Word.Paragraph, Word.Range
+     * Word.Paragraph, Word.Range, Word.WdColor
      */
     public class Program
     {
