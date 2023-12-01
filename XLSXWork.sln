@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XMLFilesProject", "XMLFiles
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordOperator", "WordOperator\WordOperator.csproj", "{8026080C-9FEF-4E0A-AAA6-6F0FB5BDB875}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFWordOperations", "WFWordOperations\WFWordOperations.csproj", "{AA95DA7F-C3CD-467E-AC0D-92DE67A33454}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{8026080C-9FEF-4E0A-AAA6-6F0FB5BDB875}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8026080C-9FEF-4E0A-AAA6-6F0FB5BDB875}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8026080C-9FEF-4E0A-AAA6-6F0FB5BDB875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA95DA7F-C3CD-467E-AC0D-92DE67A33454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA95DA7F-C3CD-467E-AC0D-92DE67A33454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA95DA7F-C3CD-467E-AC0D-92DE67A33454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA95DA7F-C3CD-467E-AC0D-92DE67A33454}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
