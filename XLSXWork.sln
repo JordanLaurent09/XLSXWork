@@ -25,9 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSV_WinForms", "CSV_WinForm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XMLFilesProject", "XMLFilesProject\XMLFilesProject.csproj", "{DE5CAB62-E8DE-4676-BAFF-2A03C1DC2F4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordOperator", "WordOperator\WordOperator.csproj", "{8026080C-9FEF-4E0A-AAA6-6F0FB5BDB875}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordOperator", "WordOperator\WordOperator.csproj", "{8026080C-9FEF-4E0A-AAA6-6F0FB5BDB875}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFWordOperations", "WFWordOperations\WFWordOperations.csproj", "{AA95DA7F-C3CD-467E-AC0D-92DE67A33454}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WFWordOperations", "WFWordOperations\WFWordOperations.csproj", "{AA95DA7F-C3CD-467E-AC0D-92DE67A33454}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassWorkTableOperator", "ClassWorkTableOperator\ClassWorkTableOperator.csproj", "{E9BD0E33-C3F5-441F-AC64-7FD8753EF331}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{AA95DA7F-C3CD-467E-AC0D-92DE67A33454}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA95DA7F-C3CD-467E-AC0D-92DE67A33454}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA95DA7F-C3CD-467E-AC0D-92DE67A33454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9BD0E33-C3F5-441F-AC64-7FD8753EF331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9BD0E33-C3F5-441F-AC64-7FD8753EF331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9BD0E33-C3F5-441F-AC64-7FD8753EF331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9BD0E33-C3F5-441F-AC64-7FD8753EF331}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
