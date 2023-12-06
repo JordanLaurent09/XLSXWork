@@ -4,7 +4,7 @@ namespace ThirdLesson
     // Продолжение работы с Word
     // WordTable - интерфейс для создания таблиц в Word
     // Индексация в таблицах начинается с 1
-    // wordDoc.Tables - коллекция, что означает - она ИТЕРИРУЕМАЯ, значит wordDoc.Tables[1] можно написать
+    // wordDoc.Tables - коллекция, что означает - она ИТЕРИРУЕМАЯ, значит wordDoc.Tables[1] можно написать (т.е. можно по индексам)
     internal class Program
     {
         static void Main(string[] args)
