@@ -29,9 +29,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordOperator", "WordOperato
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WFWordOperations", "WFWordOperations\WFWordOperations.csproj", "{AA95DA7F-C3CD-467E-AC0D-92DE67A33454}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassWorkTableOperator", "ClassWorkTableOperator\ClassWorkTableOperator.csproj", "{E9BD0E33-C3F5-441F-AC64-7FD8753EF331}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassWorkTableOperator", "ClassWorkTableOperator\ClassWorkTableOperator.csproj", "{E9BD0E33-C3F5-441F-AC64-7FD8753EF331}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordOpsWinForm", "WordOpsWinForm\WordOpsWinForm.csproj", "{A5F4955F-0AB8-42DC-AB4C-843C9111D808}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordOpsWinForm", "WordOpsWinForm\WordOpsWinForm.csproj", "{A5F4955F-0AB8-42DC-AB4C-843C9111D808}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaybillFormation", "WaybillFormation\WaybillFormation.csproj", "{3BDED9A2-CABB-4154-AFA2-74C4A00D766C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{A5F4955F-0AB8-42DC-AB4C-843C9111D808}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5F4955F-0AB8-42DC-AB4C-843C9111D808}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5F4955F-0AB8-42DC-AB4C-843C9111D808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BDED9A2-CABB-4154-AFA2-74C4A00D766C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BDED9A2-CABB-4154-AFA2-74C4A00D766C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BDED9A2-CABB-4154-AFA2-74C4A00D766C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BDED9A2-CABB-4154-AFA2-74C4A00D766C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
