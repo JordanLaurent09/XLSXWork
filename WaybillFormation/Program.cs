@@ -42,7 +42,7 @@
                 Console.WriteLine($"{item.ProductName} {item.Amount} {item.Price} {item.DealerName} {item.ReceiverName} {item.DateOfReceive}");
             }
 
-            //WaybillOps.FormWaybill(fromExcel);
+            WaybillOps.FormWaybill(fromExcel);
             
         }
     }
