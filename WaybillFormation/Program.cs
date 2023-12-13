@@ -4,31 +4,31 @@
     {
         static void Main(string[] args)
         {
-            List<Product> products = CSVWork.GetFromFile();
+            //List<Product> products = CSVWork.GetFromFile();
             
-            List<Product> temp = new List<Product>();
+            //List<Product> temp = new List<Product>();
 
-            // Фильтрация одинаковых
+            //// Фильтрация одинаковых
 
-            foreach(Product product in products)
-            {
-                bool isDataExists = false;
+            //foreach(Product product in products)
+            //{
+            //    bool isDataExists = false;
 
-                for(int i = 0; i < temp.Count; i++)
-                {
-                    if (temp[i].ProductName == product.ProductName && temp[i].ReceiverName == product.ReceiverName && temp[i].DateOfReceive == product.DateOfReceive)
-                    {
-                        temp[i].Amount += product.Amount;
-                        isDataExists = true;
-                    }
-                }
-                if (!isDataExists)
-                {
-                    temp.Add(product);
-                }
-            }
+            //    for(int i = 0; i < temp.Count; i++)
+            //    {
+            //        if (temp[i].ProductName == product.ProductName && temp[i].ReceiverName == product.ReceiverName && temp[i].DateOfReceive == product.DateOfReceive)
+            //        {
+            //            temp[i].Amount += product.Amount;
+            //            isDataExists = true;
+            //        }
+            //    }
+            //    if (!isDataExists)
+            //    {
+            //        temp.Add(product);
+            //    }
+            //}
 
-            temp.Sort();
+            //temp.Sort();
             //foreach (var item in temp)
             //{
             //    Console.WriteLine($"{item.ProductName} {item.DateOfReceive}");
@@ -41,6 +41,9 @@
             {
                 Console.WriteLine($"{item.ProductName} {item.Amount} {item.Price} {item.DealerName} {item.ReceiverName} {item.DateOfReceive}");
             }
+
+            //WaybillOps.FormWaybill(fromExcel);
+            
         }
     }
 }
